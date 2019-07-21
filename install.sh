@@ -26,7 +26,7 @@ docker rmi xrptipbot/rippledvalidator:latest
 
 # Reinstall Docker Rippled Validator with latest Image + Attach Existing Keystore
 
-docker run -dit --name rippledvalidator -p 51235:51235 -v /keystore/:/keystore/ xrptipbot/rippledvalidator:latest
+docker run -dit --restart always --name rippledvalidator -p 51235:51235 -v /keystore/:/keystore/ xrptipbot/rippledvalidator:latest
 
 #-----------------------------------------------------------------------------------------------------------------
 
